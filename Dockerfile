@@ -1,6 +1,8 @@
 FROM quay.io/keboola/base
 MAINTAINER Ondrej Popelka <ondrej.popelka@keboola.com>
 
+ENV DOCKER_CUSTOM_VERSION 0.0.3
+
 RUN yum -y update && \
 	yum -y install \
 		gcc \
