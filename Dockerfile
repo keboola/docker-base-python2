@@ -1,11 +1,15 @@
-FROM quay.io/keboola/base
+FROM centos:centos7
 MAINTAINER Ondrej Popelka <ondrej.popelka@keboola.com>
 
-ENV DOCKER_CUSTOM_VERSION 0.0.3
+ENV DOCKER_CUSTOM_VERSION 0.0.4
 
 RUN yum -y update && \
 	yum -y install \
+		epel-release \
+		git \
+		tar \
 		gcc \
+		gcc-c++ \
 		make \
 		openssl-devel \
 		python-devel \
